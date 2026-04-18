@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './ServiceIntro.module.css'
 
 export default function ServiceIntro({
@@ -56,9 +57,9 @@ export default function ServiceIntro({
           )}
 
           {btnLabel && (
-            <a href={btnHref} className={`${styles.btn} ${btnSolid ? styles[`btnSolid_${color}`] : styles[`btn_${color}`]}`}>
-              {btnLabel}
-            </a>
+            btnHref.startsWith('/')
+              ? <Link to={btnHref} className={`${styles.btn} ${btnSolid ? styles[`btnSolid_${color}`] : styles[`btn_${color}`]}`}>{btnLabel}</Link>
+              : <a href={btnHref} className={`${styles.btn} ${btnSolid ? styles[`btnSolid_${color}`] : styles[`btn_${color}`]}`}>{btnLabel}</a>
           )}
         </div>
 

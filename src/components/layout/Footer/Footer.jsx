@@ -1,9 +1,9 @@
 import { useState }    from 'react'
 import { useLanguage } from '@/context/LanguageContext'
 import logo            from '@assets/logo/logo-primary.svg'
-import partnerBiotopPond from '@assets/images/biotop-swimming-pond-logo.png'
-import partnerBiotopPool from '@assets/images/biotop-living-pool-logo.png'
-import partnerOptigruen  from '@assets/images/optigruen-logo.png'
+import partnerBiotopPond from '@assets/images/biotop-swimming-pond-logo.webp'
+import partnerBiotopPool from '@assets/images/biotop-living-pool-logo.webp'
+import partnerOptigruen  from '@assets/images/optigruen-logo.webp'
 import styles          from './Footer.module.css'
 
 const t = {

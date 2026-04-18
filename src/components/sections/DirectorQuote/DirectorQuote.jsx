@@ -1,7 +1,7 @@
 import { useLanguage } from '@/context/LanguageContext'
 import quoteIcon       from '@assets/icons/quote-icon.svg'
 import logo            from '@assets/logo/logo-secondary.svg'
-import photo           from '@assets/images/Ulrich-Kraft.jpg'
+import photo           from '@assets/images/Ulrich-Kraft.webp'
 import styles          from './DirectorQuote.module.css'
 
 const t = {

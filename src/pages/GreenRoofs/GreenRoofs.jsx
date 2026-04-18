@@ -5,11 +5,11 @@ import ServiceCards     from '@sections/ServiceCards/ServiceCards'
 import ServiceIntro     from '@sections/ServiceIntro/ServiceIntro'
 import ServiceGallery   from '@sections/ServiceGallery/ServiceGallery'
 
-import pb37                from '@assets/images/pb37.jpg'
-import iconAQImprovement   from '@assets/icons/aq-improvement-icon.png'
-import iconBiodiversity    from '@assets/icons/Biodiversity-icon.png'
-import iconReducedMaint    from '@assets/icons/Reduced-maintenance-icon.png'
-import iconExpertPartner   from '@assets/icons/Expert-partnership-icon.png'
+import pb37                from '@assets/images/pb37.webp'
+import iconAQImprovement   from '@assets/icons/aq-improvement-icon.webp'
+import iconBiodiversity    from '@assets/icons/Biodiversity-icon.webp'
+import iconReducedMaint    from '@assets/icons/Reduced-maintenance-icon.webp'
+import iconExpertPartner   from '@assets/icons/Expert-partnership-icon.webp'
 
 const cards = {
   en: [

@@ -1,7 +1,7 @@
 import { useLanguage } from '@/context/LanguageContext'
 import ImageOverlayCard from '@ui/ImageOverlayCard/ImageOverlayCard'
-import poolsImg         from '@assets/images/swimming-pools-from-biotop.jpg'
-import pondsImg         from '@assets/images/swimming-ponds-from-biotop.jpg'
+import poolsImg         from '@assets/images/swimming-pools-from-biotop.webp'
+import pondsImg         from '@assets/images/swimming-ponds-from-biotop.webp'
 import styles           from './Biotop.module.css'
 
 const t = {

@@ -11,15 +11,15 @@ import { useLanguage } from '@/context/LanguageContext'
 import styles          from './Home.module.css'
 
 // ── Pond images — real + temp fillers until more are added ──
-import pondImg1  from '@assets/images/swimming-pond-and-living-pool.jpg'
-import pondImg2  from '@assets/images/about-garden.jpg'
-import pondImg3  from '@assets/images/home-hero-image.jpg'
+import pondImg1  from '@assets/images/swimming-pond-and-living-pool.webp'
+import pondImg2  from '@assets/images/about-garden.webp'
+import pondImg3  from '@assets/images/home-hero-image.webp'
 
 // ── Roof & Garden — temp fillers, replace when real images added ──
-import roofImg1    from '@assets/images/grass-image.jpg'
-import roofImg2    from '@assets/images/about-garden.jpg'
-import gardenImg1  from '@assets/images/about-garden.jpg'
-import gardenImg2  from '@assets/images/grass-image.jpg'
+import roofImg1    from '@assets/images/grass-image.webp'
+import roofImg2    from '@assets/images/about-garden.webp'
+import gardenImg1  from '@assets/images/about-garden.webp'
+import gardenImg2  from '@assets/images/grass-image.webp'
 
 const featureContent = {
   en: {

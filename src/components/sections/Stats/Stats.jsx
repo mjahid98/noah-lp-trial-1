@@ -1,6 +1,7 @@
 import { useLanguage } from '@/context/LanguageContext'
 import { useCountUp } from '@hooks/useCountUp'
-import grassImage from '@assets/images/grass-image.jpg'
+import grassImage       from '@assets/images/grass-image.webp'
+import grassImageSrcSet from '@assets/images/grass-image.webp?w=480;768;1280&format=webp&as=srcset'
 import styles from './Stats.module.css'
 
 const t = {
@@ -51,8 +52,11 @@ export default function Stats() {
         {/* Left — image, no padding, goes to left viewport edge */}
         <img
           src={grassImage}
+          srcSet={grassImageSrcSet}
+          sizes="(max-width: 768px) 100vw, 50vw"
           alt="Lush green garden grass"
           className={styles.image}
+          data-animate
         />
 
         {/* Right — stats + divider + description */}

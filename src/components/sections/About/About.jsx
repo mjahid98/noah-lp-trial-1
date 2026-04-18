@@ -1,6 +1,7 @@
-import { useLanguage } from '@/context/LanguageContext'
-import aboutImage from '@assets/images/about-garden.jpg'
-import styles from './About.module.css'
+import { useLanguage }    from '@/context/LanguageContext'
+import aboutImage        from '@assets/images/about-garden.webp'
+import aboutImageSrcSet  from '@assets/images/about-garden.webp?w=640;1280;1920&format=webp&as=srcset'
+import styles            from './About.module.css'
 
 const t = {
   en: {
@@ -32,6 +33,8 @@ export default function About() {
       <div className={styles.imageWrapper}>
         <img
           src={aboutImage}
+          srcSet={aboutImageSrcSet}
+          sizes="100vw"
           alt="Beautiful garden landscape"
           className={styles.bgImage}
         />

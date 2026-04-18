@@ -1,6 +1,6 @@
 import { useLanguage } from '@/context/LanguageContext'
 import VideoPlayer from '@ui/VideoPlayer/VideoPlayer'
-import thumbnail   from '@assets/images/biotop-video-thumbnail.png'
+import thumbnail   from '@assets/images/biotop-video-thumbnail.webp'
 import video       from '@assets/videos/biotop.mp4'
 import styles      from './BiotopVideo.module.css'
 

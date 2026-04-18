@@ -3,10 +3,10 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { useLanguage }  from '@/context/LanguageContext'
 import styles           from './Team.module.css'
 
-import img1 from '@assets/images/team-img-1.jpg'
-import img2 from '@assets/images/team-img-2.jpg'
-import img3 from '@assets/images/team-img-3.jpg'
-import img4 from '@assets/images/team-img-4.jpg'
+import img1 from '@assets/images/team-img-1.webp'
+import img2 from '@assets/images/team-img-2.webp'
+import img3 from '@assets/images/team-img-3.webp'
+import img4 from '@assets/images/team-img-4.webp'
 
 const photos = [img1, img2, img3, img4]
 

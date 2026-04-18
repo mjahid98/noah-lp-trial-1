@@ -6,16 +6,16 @@ import ServiceIntro     from '@sections/ServiceIntro/ServiceIntro'
 import ImageSlider      from '@sections/ImageSlider/ImageSlider'
 import ServiceGallery   from '@sections/ServiceGallery/ServiceGallery'
 
-import heroBg    from '@assets/images/gardens-main.jpg'
-import introImg  from '@assets/images/about-garden.jpg'
-import sliderImg from '@assets/images/gardens-main.jpg'
+import heroBg    from '@assets/images/gardens-main.webp'
+import introImg  from '@assets/images/about-garden.webp'
+import sliderImg from '@assets/images/gardens-main.webp'
 
-import iconEarthenworks from '@assets/icons/Earthenworks-excavation.png'
-import iconPlanting     from '@assets/icons/Planting-lawns.png'
-import iconHardscape    from '@assets/icons/Hardscape-stonework.png'
-import iconIrrigation   from '@assets/icons/Irrigation-systems.png'
-import iconFencing      from '@assets/icons/Fencing-boundary-work.png'
-import iconMaintenance  from '@assets/icons/Maintenance-setup.png'
+import iconEarthenworks from '@assets/icons/Earthenworks-excavation.webp'
+import iconPlanting     from '@assets/icons/Planting-lawns.webp'
+import iconHardscape    from '@assets/icons/Hardscape-stonework.webp'
+import iconIrrigation   from '@assets/icons/Irrigation-systems.webp'
+import iconFencing      from '@assets/icons/Fencing-boundary-work.webp'
+import iconMaintenance  from '@assets/icons/Maintenance-setup.webp'
 
 const cards = {
   en: [

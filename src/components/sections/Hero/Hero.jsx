@@ -1,7 +1,8 @@
-import { useLanguage } from '@/context/LanguageContext'
-import scrollIcon from '@assets/icons/scroll-down-icon.svg'
-import heroBg from '@assets/images/home-hero-image.jpg'
-import styles from './Hero.module.css'
+import { useLanguage }  from '@/context/LanguageContext'
+import scrollIcon      from '@assets/icons/scroll-down-icon.svg'
+import heroBg          from '@assets/images/home-hero-image.webp'
+import heroBgSrcSet    from '@assets/images/home-hero-image.webp?w=640;1280;1920&format=webp&as=srcset'
+import styles          from './Hero.module.css'
 
 const t = {
   en: {
@@ -35,6 +36,8 @@ export default function Hero() {
         {/* Background image */}
         <img
           src={heroBg}
+          srcSet={heroBgSrcSet}
+          sizes="100vw"
           alt="Beautiful garden with natural swimming pond"
           className={styles.bgImage}
         />

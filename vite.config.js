@@ -1,9 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { defineConfig }  from 'vite'
+import react             from '@vitejs/plugin-react'
+import { imagetools }    from 'vite-imagetools'
+import { resolve }       from 'path'
+
+// Suppress the libvips "no property named smart_deblock" noise.
+// This is a harmless mismatch between vite-imagetools v6's bundled libvips
+// and the WebP encoder on this platform — setting VIPS_WARNING=0 silences it.
+process.env.VIPS_WARNING = '0'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), imagetools()],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),

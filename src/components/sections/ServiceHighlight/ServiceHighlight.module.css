@@ -1,0 +1,76 @@
+.section {
+  position: relative;
+  padding: 150px var(--section-pad-x);
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* ── Quote text ── */
+.quote {
+  font-family: var(--font-heading);
+  font-size: 35px;
+  font-weight: var(--font-medium);
+  line-height: 55px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1E1E1E;
+  margin: 0;
+  max-width: 1040px;
+}
+
+.plain {
+  /* inherits quote styles */
+}
+
+/* Colored italic highlight */
+.hl {
+  font-style: italic;
+}
+
+.hl_teal  { color: var(--color-teal); }
+.hl_lime  { color: var(--color-lime); }
+.hl_olive { color: var(--color-olive); }
+
+/* ── Responsive ── */
+@media (max-width: 1120px) {
+  .section {
+    padding: 100px var(--space-8);
+  }
+
+  .quote {
+    font-size: 30px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 100px var(--space-8);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 72px var(--space-4);
+  }
+
+  .quote {
+    font-size: 22px;
+    line-height: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 48px var(--space-4);
+  }
+
+  .quote {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}

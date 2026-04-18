@@ -1,0 +1,13 @@
+.section {
+  padding-block: var(--section-padding-y);
+}
+
+.bg_default { background-color: var(--color-bg); }
+.bg_subtle  { background-color: var(--color-bg-subtle); }
+.bg_dark    { background-color: var(--color-bg-dark); }
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: var(--section-padding-y-sm);
+  }
+}

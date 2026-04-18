@@ -1,0 +1,182 @@
+.section {
+  padding-inline: 59px;
+  padding-bottom: 116px;
+}
+
+/* ── Image wrapper — bg image fills it, padding positions the card ── */
+.imageWrapper {
+  position: relative;
+  padding: 70px 80px;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── Card — normal flow, sits above image via z-index ── */
+.card {
+  position: relative;
+  z-index: 1;
+  width: 36.5%;
+  min-width: 450px;
+  background: #FFFFFF;
+  border: 1px solid rgba(153, 153, 153, 0.3);
+  border-radius: 40px;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  padding: 65px 55px 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  text-align: center;
+}
+
+/* ── Heading ── */
+.heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-medium);
+  line-height: 45px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-olive);
+  margin: 0;
+}
+
+/* ── Body text ── */
+.body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  line-height: 30px;
+  text-align: center;
+  color: #1E1E1E;
+  margin: 0;
+}
+
+/* ── CTA text (semibold) ── */
+.ctaText {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  line-height: 30px;
+  text-align: center;
+  color: #1E1E1E;
+  margin: 0;
+}
+
+/* ── Button ── */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  border-radius: var(--radius-btn);
+  background-color: var(--color-olive);
+  color: var(--color-text-light);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  margin-top: var(--space-2);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn:hover {
+  background-color: var(--color-olive-dark);
+  box-shadow: var(--shadow-btn-hover);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1120px) {
+  .section {
+    padding-inline: var(--space-8);
+    padding-bottom: var(--space-16);
+  }
+
+  .imageWrapper {
+    padding: 50px 50px;
+  }
+
+  .card {
+    width: 45%;
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding-inline: var(--space-8);
+    padding-bottom: var(--space-16);
+  }
+
+  .imageWrapper {
+    padding: 50px 50px;
+  }
+
+  .card {
+    width: 45%;
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-inline: var(--space-4);
+    padding-bottom: 40px;
+    background-color: #ffffff;
+  }
+
+  .heading {
+    line-height: 35px;
+  }
+
+  .imageWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-radius: 0;
+    overflow: visible;
+    background: none;
+  }
+
+  .bgImage {
+    position: relative;
+    height: 280px;
+    width: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .card {
+    position: static;
+    width: 100%;
+    min-width: unset;
+    border-radius: 0;
+    border: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: transparent;
+    padding: var(--space-8) 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .bgImage {
+    height: 240px;
+  }
+
+  .card {
+    padding: var(--space-8) 0 0;
+  }
+}

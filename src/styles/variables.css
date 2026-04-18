@@ -1,0 +1,111 @@
+:root {
+  /* ── Brand Colors ── */
+  --color-teal:          #43C2C0;
+  --color-teal-dark:     #34A5A4;
+  --color-lime:          #B5CB33;
+  --color-lime-dark:     #9EB22C;
+  --color-olive:         #86A05B;
+  --color-olive-alt:     #86A05B;
+  --color-olive-dark:    #70864B;
+
+  /* ── Backgrounds ── */
+  --color-bg:            #FFFFFF;
+  --color-bg-footer:     #EDF9EC;
+  --color-bg-dark:       #454545;
+  --color-olive-deep:    #48621D;
+
+  /* ── Text ── */
+  --color-text:          #454545;
+  --color-text-light:    #FFFFFF;
+  --color-text-muted:    rgba(255, 255, 255, 0.7);
+  --color-heading-dark:  #FFFFFF;
+  --color-heading-olive: #869F5A;
+
+  /* ── Glassmorphism card ── */
+  --glass-border:        linear-gradient(142.82deg, rgba(255,255,255,0.6) 4.89%, rgba(153,153,153,0.6) 100%);
+  --glass-blur:          blur(40px);
+
+  /* ── Nav active ── */
+  --color-nav-active:    #869F5A;
+
+  /* ── Typography ── */
+  --font-heading: 'Jost', sans-serif;
+  --font-body:    'DM Sans', sans-serif;   /* Gilroy placeholder — swap when license available */
+
+  /* Sizes */
+  --text-xs:    0.75rem;    /* 12px */
+  --text-sm:    0.875rem;   /* 14px */
+  --text-base:  1rem;       /* 16px */
+  --text-lg:    1.125rem;   /* 18px */
+  --text-xl:    1.25rem;    /* 20px */
+  --text-2xl:   1.5625rem;  /* 25px — H3 */
+  --text-3xl:   2.1875rem;  /* 35px — H2 */
+  --text-4xl:   2.8125rem;  /* 45px — H1 */
+
+  /* Weights */
+  --font-regular:  400;
+  --font-medium:   500;
+  --font-semibold: 600;
+  --font-bold:     700;
+
+  /* Line heights */
+  --leading-h1:     60px;
+  --leading-h2:     45px;
+  --leading-h3:     35px;
+  --leading-sub:    30px;
+  --leading-body:   34px;
+  --leading-nav:    17.57px;
+
+  /* ── Spacing ── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  --section-padding-y:    var(--space-20);
+  --section-padding-y-sm: var(--space-12);
+  --container-max:        1200px;
+  --container-pad:        var(--space-6);
+
+  /* ── Borders ── */
+  --radius-btn:  30px;
+  --radius-card: 12px;
+  --radius-sm:   6px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-btn-hover: 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+  --shadow-card:      0 4px 24px rgba(0, 0, 0, 0.06);
+  --shadow-nav:       0 2px 12px rgba(0, 0, 0, 0.08);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ── Z-index ── */
+  --z-raised:  10;
+  --z-overlay: 100;
+  --z-navbar:  200;
+
+  /* ── Layout ── */
+  /* logo 56px + padding 20px top + 20px bottom */
+  --navbar-height: 96px;
+  /* Horizontal section padding — grows beyond 1440px to keep content centered */
+  --section-pad-x: max(59px, calc((100vw - 1600px) / 2 + 59px));
+}
+
+@media (max-width: 768px) {
+  :root {
+    --text-3xl: 1.5625rem; /* 25px on mobile */
+    --leading-h2: 35px;
+  }
+}

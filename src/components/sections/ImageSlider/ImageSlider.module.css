@@ -1,0 +1,149 @@
+.section {
+  padding: 0 59px 80px;
+  background-color: var(--color-bg);
+}
+
+/* Relative container — arrows are positioned against this */
+.container {
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+/* Pre-paint hidden state — set via useLayoutEffect before first paint */
+[data-slider-pending] {
+  opacity: 0;
+  border-radius: 8px !important;
+  transform: scale(0.98);
+}
+
+/* Revealed — added by IntersectionObserver when container enters viewport */
+.revealed {
+  animation: sliderIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes sliderIn {
+  from {
+    border-radius: 8px;
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+/* Embla viewport */
+.wrapper {
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.wrapper:active {
+  cursor: grabbing;
+}
+
+/* Embla track */
+.track {
+  display: flex;
+  height: 100%;
+  touch-action: pan-y pinch-zoom;
+}
+
+/* Each slide */
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Arrows ── */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: opacity var(--transition-fast);
+}
+
+.arrow:hover {
+  opacity: 0.8;
+}
+
+.arrowLeft  { left: var(--space-4); }
+.arrowRight { right: var(--space-4); }
+
+/* ── Pagination dots ── */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 2;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transform: scale(0.75);
+  transition: background-color var(--transition-fast), transform 0.2s ease;
+}
+
+.dotActive {
+  background-color: #fff;
+  transform: scale(1);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1120px) {
+  .section {
+    padding: 0 var(--space-8) 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 0 var(--space-4) 48px;
+  }
+
+  .container {
+    border-radius: 24px;
+  }
+
+  .wrapper {
+    height: 55vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    border-radius: 20px;
+  }
+
+  .wrapper {
+    height: 60vw;
+  }
+}

@@ -1,0 +1,76 @@
+@import './variables.css';
+@import './reset.css';
+@import './typography.css';
+
+/* ── Fonts ── */
+@import '@fontsource/jost/400.css';
+@import '@fontsource/jost/500.css';
+@import '@fontsource/jost/700.css';
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/500.css';
+@import '@fontsource/dm-sans/700.css';
+/* Gilroy: swap these out once client provides licensed font files */
+
+
+/* ── Scroll margin for sticky navbar — per section, not global ── */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+@media (max-width: 768px) {
+  section[id] {
+    scroll-margin-top: 88px;
+  }
+}
+
+@media (max-width: 480px) {
+  section[id] {
+    scroll-margin-top: 72px;
+  }
+}
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* ── Glass card utility ── */
+.glass {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid;
+  border-image-source: var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+/* ── Pre-animation hidden state — set via useLayoutEffect before first paint ── */
+[data-will-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+/* ── Element reveal — added by IntersectionObserver when element enters viewport ── */
+.reveal-child {
+  animation: revealUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Accessibility ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

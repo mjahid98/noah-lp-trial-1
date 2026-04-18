@@ -1,0 +1,169 @@
+.section {
+  position: relative;
+  padding: 80px var(--section-pad-x);
+  background-color: var(--color-bg);
+}
+
+/* Divider at top — matches feature section style */
+.section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #E1E1E1;
+}
+
+/* ── Centered header ── */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+  color: var(--color-olive);
+  margin: 0;
+  line-height: var(--leading-h2);
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  line-height: 30px;
+  color: #1E1E1E;
+  margin: 0;
+  max-width: 560px;
+}
+
+/* ── Photo grid ──
+   Fixed 4 columns on desktop. Adding more photos naturally wraps to new rows.
+   Each card maintains the Figma aspect ratio (319 × 341) with a max-height cap
+   so it never grows too large on wide/4K screens. ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.cardWrapper {
+  aspect-ratio: 319 / 341;
+  max-height: 700px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.gridImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Mobile carousel — hidden on desktop ── */
+.carousel {
+  display: none;
+}
+
+/* Embla viewport — clips the track */
+.emblaViewport {
+  overflow: hidden;
+  border-radius: 20px;
+  aspect-ratio: 300 / 374;
+  cursor: grab;
+}
+
+.emblaViewport:active {
+  cursor: grabbing;
+}
+
+/* Embla track — flex row of slides */
+.emblaTrack {
+  display: flex;
+  height: 100%;
+  touch-action: pan-y pinch-zoom;
+}
+
+/* Each slide */
+.emblaSlide {
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 100%;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--space-5);
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background-color: #AEAEAE;
+  cursor: pointer;
+  transform: scale(0.67);
+  transition: background-color var(--transition-fast), transform 0.2s ease;
+}
+
+.dotActive {
+  background-color: #869F5A;
+  transform: scale(1);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1120px) {
+  .section {
+    padding: 60px var(--space-8);
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 60px var(--space-8);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px var(--space-4);
+  }
+
+  /* Switch to carousel on mobile */
+  .grid {
+    display: none;
+  }
+
+  .carousel {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--space-10) var(--space-4);
+  }
+}

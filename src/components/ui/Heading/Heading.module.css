@@ -1,0 +1,19 @@
+.heading {
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+  line-height: var(--leading-tight);
+}
+
+/* Optional size overrides */
+.size_xs   { font-size: var(--text-xl); }
+.size_sm   { font-size: var(--text-2xl); }
+.size_md   { font-size: var(--text-3xl); }
+.size_lg   { font-size: var(--text-4xl); }
+.size_xl   { font-size: var(--text-5xl); }
+.size_2xl  { font-size: var(--text-6xl); }
+
+/* Alignment */
+.align_left   { text-align: left; }
+.align_center { text-align: center; }
+.align_right  { text-align: right; }

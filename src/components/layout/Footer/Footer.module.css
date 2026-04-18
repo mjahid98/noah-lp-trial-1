@@ -1,0 +1,492 @@
+.footer {
+  background-color: var(--color-bg-footer);
+  padding: 80px var(--section-pad-x);
+}
+
+/* ── Two-column layout ── */
+.inner {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+}
+
+/* ══ LEFT ══ */
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logoLink { display: inline-block; }
+
+.logo {
+  width: 100%;
+  max-width: 341px;
+  height: auto;
+}
+
+/* Contact row */
+/* Outer block — column so divider sits below the info row */
+.contactRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* Inner horizontal row — contact items + socials */
+.contactInner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.contactGroup {
+  display: flex;
+  gap: var(--space-10);
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.contactLabel {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 0;
+  color: var(--color-olive);
+  text-transform: capitalize;
+}
+
+.contactValue {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a.contactValue:hover { color: var(--color-olive); }
+
+/* Socials */
+.socials {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition-fast);
+}
+
+.socialLink:hover { opacity: 0.85; }
+
+/* Divider */
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #D6E1C3;
+  margin: 0;
+}
+
+/* License partners */
+.partners {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.partnersTitle {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 0;
+  color: var(--color-olive);
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.partnerLogos {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.partnerLogo {
+  height: 72px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Full-width legal row — sits below both columns */
+.legalRow {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.legal {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.legalLink {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 0;
+  color: var(--color-olive);
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: color var(--transition-fast);
+}
+
+.legalLink:hover { color: var(--color-olive-dark); }
+
+.copyright {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 0;
+  color: var(--color-olive);
+  text-transform: capitalize;
+  margin-left: auto;
+}
+
+/* ══ RIGHT — form card ══ */
+.formCard {
+  flex: 0 0 44%;          /* 585px / 1322px ≈ 44% */
+  background: #ffffff;
+  border-radius: 40px;
+  padding: 50px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Form title */
+.formTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);   /* 35px */
+  font-weight: var(--font-medium);
+  line-height: 50px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--color-olive);
+  margin: 0;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Email + phone side by side */
+.inputRow {
+  display: flex;
+  gap: 20px;
+}
+
+.inputRow .input { flex: 1; }
+
+/* Underline-style inputs */
+.input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 10px 8px;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  line-height: 26px;
+  color: #869F5A;
+  outline: none;
+  position: relative;
+  /* Animated underline via box-shadow */
+  box-shadow: 0 1px 0 0 #869F5A;
+  transition: box-shadow 0.25s ease;
+}
+
+.input::placeholder {
+  color: #869F5A;
+}
+
+.input:focus {
+  box-shadow: 0 2px 0 0 var(--color-olive-dark);
+}
+
+/* Checkbox group */
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--font-regular);
+  line-height: 22px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.checkboxLink {
+  color: var(--color-olive);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast);
+}
+
+.checkboxLink:hover {
+  color: var(--color-olive-dark);
+}
+
+/* Hide native input — custom box used instead */
+.checkboxInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.checkboxBox {
+  flex-shrink: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 4.25px;
+  border: 1.5px solid #869F5A;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.checkboxChecked {
+  background-color: #869F5A;
+  border-color: #869F5A;
+}
+
+/* Submit button */
+.submitBtn {
+  width: 100%;
+  height: 54px;
+  border: none;
+  border-radius: var(--radius-btn);
+  background-color: var(--color-olive);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.submitBtn:hover {
+  background-color: var(--color-olive-dark);
+  box-shadow: var(--shadow-btn-hover);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1120px) {
+  .footer {
+    padding: 60px var(--space-8);
+  }
+
+  .left {
+    flex: 0 0 38%;
+  }
+
+  .formCard {
+    flex: 1;
+    padding: 40px 36px;
+  }
+
+  .logoLink {
+    margin-bottom: var(--space-8);
+  }
+
+  .contactGroup {
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .contactInner {
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px var(--space-8);
+  }
+
+  .left {
+    flex: 0 0 38%;
+  }
+
+  .formCard {
+    flex: 1;
+    padding: 40px 36px;
+  }
+
+  .logoLink {
+    margin-bottom: var(--space-8);
+  }
+
+  .contactGroup {
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .contactInner {
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px var(--space-6);
+  }
+
+  /* Dissolve .left — its children join .inner's flex flow directly */
+  .left {
+    display: contents;
+  }
+
+  .inner {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  /* 1 — Logo: centered */
+  .logoLink {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .logo {
+    width: 54%;
+  }
+
+  /* 2 — Form card */
+  .formCard {
+    order: 2;
+    flex: none;
+    width: 100%;
+  }
+
+  /* 3 — Contact row */
+  .contactRow {
+    order: 3;
+  }
+
+  /* Contact items as 2-col grid */
+  .contactInner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    flex-direction: unset;
+  }
+
+  /* Dissolve contactGroup so its items become direct grid cells */
+  .contactGroup {
+    display: contents;
+  }
+
+  /* 4 — Partners */
+  .partners {
+    order: 4;
+  }
+
+  /* Stack email+phone inputs */
+  .inputRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Form field spacing */
+  .form {
+    gap: 20px;
+  }
+
+  /* Extra 4px on top of the 20px gap = 24px between inputs and checkboxes */
+  .checkboxGroup {
+    margin-top: 4px;
+  }
+
+  /* Checkbox label font */
+  .checkboxLabel {
+    font-size: 12px;
+  }
+
+  /* Copyright full width */
+  .copyright {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .formTitle {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .partnerLogos {
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .partnerLogo {
+    min-height: 65px;
+    height: auto;
+    width: auto;
+    max-width: 30%;
+  }
+
+  .legal {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--space-10) var(--space-4);
+  }
+
+  .formCard {
+    padding: 32px var(--space-6) var(--space-6);
+  }
+
+  .partnerLogo {
+    height: 56px;
+  }
+}

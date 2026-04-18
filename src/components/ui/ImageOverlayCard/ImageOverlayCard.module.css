@@ -1,0 +1,45 @@
+.card {
+  position: relative;
+  border-radius: 20px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transform: translateZ(0);
+  will-change: transform;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .image {
+  transform: translateZ(0) scale(1.03);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-base);
+}
+
+.card:hover .overlay {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.label {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding-inline: var(--space-4);
+}

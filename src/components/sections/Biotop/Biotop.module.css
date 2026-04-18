@@ -1,0 +1,144 @@
+.section {
+  padding: 80px var(--section-pad-x);
+  background-color: var(--color-bg);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ── Left — text ── */
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-medium);
+  line-height: 45px;
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.headingMain {
+  color: var(--color-text);
+  font-style: normal;
+}
+
+.headingAccent {
+  color: var(--color-teal);
+  font-style: italic;
+}
+
+.body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  line-height: 30px;
+  color: #1E1E1E;
+  margin: 0;
+}
+
+.ctaText {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  font-style: italic;
+  line-height: 30px;
+  color: #1E1E1E;
+  margin: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 var(--space-10);
+  border-radius: var(--radius-btn);
+  background-color: var(--color-teal);
+  color: var(--color-text-light);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn:hover {
+  background-color: var(--color-teal-dark);
+  box-shadow: var(--shadow-btn-hover);
+}
+
+/* ── Right — stacked image cards ── */
+.imageCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1120px) {
+  .section {
+    padding: 60px var(--space-8);
+  }
+
+  .inner {
+    gap: var(--space-10);
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 60px var(--space-8);
+  }
+
+  .inner {
+    gap: var(--space-10);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    line-height: 35px;
+  }
+
+  .section {
+    padding: 60px var(--space-4);
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .textCol {
+    align-items: center;
+  }
+
+  .heading,
+  .body,
+  .ctaText {
+    text-align: center;
+  }
+
+  /* Hide button and image cards — button is shown after BiotopVideo instead */
+  .btn,
+  .imageCol {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--space-10) var(--space-4);
+  }
+}

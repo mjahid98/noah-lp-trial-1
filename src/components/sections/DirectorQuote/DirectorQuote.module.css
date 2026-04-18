@@ -1,0 +1,261 @@
+.section {
+  /* original spacing (70px) + overflow amount (70px) = 140px top/bottom */
+  padding: 140px var(--section-pad-x);
+  background-color: var(--color-bg);
+}
+
+/* ── Green card — parent of all 3 columns ── */
+.card {
+  display: flex;
+  align-items: stretch;   /* all columns fill the card height */
+  background-color: var(--color-olive-deep);
+  border-radius: 30px;
+  overflow: visible;      /* allow photo to overflow upward */
+  min-height: 440px;
+}
+
+/* ── Col 1 — Image ──
+   In-flow spacer (42.7% wide) so text col doesn't overlap it.
+   The actual photo is absolute: top: -70px overflows above the card. ── */
+.imageCol {
+  flex: 0 0 42.7%;        /* 564px / 1322px ≈ 42.7% */
+  position: relative;
+  /* no overflow: hidden — photo must overflow both top and bottom freely.
+     horizontal overflow is prevented by left: 0 / right: 0 on the photo. */
+}
+
+.photo {
+  position: absolute;
+  top: -70px;             /* overflow 70px above the card */
+  bottom: -70px;          /* overflow 70px below the card */
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: calc(100% + 140px); /* top 70px + bottom 70px */
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 40px;
+}
+
+/* ── Col 2 — Text content ── */
+.textCol {
+  flex: 1;
+  padding: 80px 28px 80px 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-5);
+}
+
+.quote {
+  display: block;
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);    /* 35px */
+  font-weight: var(--font-medium);
+  line-height: 45px;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: 1.125rem;           /* 18px */
+  font-weight: var(--font-regular);
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* ── Col 3 — Logo, pinned to bottom ── */
+.logoCol {
+  flex: 0 0 9.53%;   /* 126px / 1322px */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 28px;
+  padding-right: 20px;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1120px) {
+  .section {
+    padding: 40px var(--space-8) 60px;
+  }
+
+  .card {
+    flex-direction: column;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .imageCol {
+    flex: none;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  .photo {
+    position: static;
+    width: 100%;
+    height: 100%;
+    top: auto;
+    border-radius: 15px;
+  }
+
+  .textCol {
+    padding: 40px var(--space-8);
+  }
+
+  .quote {
+    font-size: 120px;
+  }
+
+  .logoCol {
+    flex: none;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 var(--space-8) var(--space-8);
+  }
+
+  .logo {
+    width: 20%;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 40px var(--space-8) 60px;
+  }
+
+  .card {
+    flex-direction: column;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .imageCol {
+    flex: none;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  .photo {
+    position: static;
+    width: 100%;
+    height: 100%;
+    top: auto;
+    border-radius: 15px;
+  }
+
+  .textCol {
+    padding: 40px var(--space-8);
+  }
+
+  .quote {
+    font-size: 120px;
+  }
+
+  .logoCol {
+    flex: none;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 var(--space-8) var(--space-8);
+  }
+
+  .logo {
+    width: 20%;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    line-height: 35px;
+  }
+
+  .section {
+    padding: 40px var(--space-4) 60px;
+  }
+
+  .card {
+    flex-direction: column;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .imageCol {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 5 / 6;
+    height: auto;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  .photo {
+    position: static;
+    width: 100%;
+    height: 100%;
+    top: auto;
+    border-radius: 15px;
+  }
+
+  .textCol {
+    padding: 40px var(--space-6);
+  }
+
+  .logoCol {
+    flex: none;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 var(--space-6) var(--space-6);
+  }
+
+  .logo {
+    width: 20%;
+    min-width: 80px;
+  }
+
+  .quote {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--space-8) var(--space-4) var(--space-10);
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .imageCol {
+    aspect-ratio: 5 / 6;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .photo {
+    border-radius: 15px;
+  }
+}

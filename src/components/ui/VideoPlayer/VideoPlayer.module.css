@@ -1,0 +1,71 @@
+.wrapper {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video {
+  width: 100%;
+  display: block;
+  /* 660px ÷ 1440px artboard = 45.83vw — stays proportional at every viewport width */
+  height: 45.83vw;
+  /* Never taller than the visible area below the sticky navbar */
+  max-height: calc(92vh - var(--navbar-height));
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+/* ── Overlay ── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: rgba(0, 0, 0, 0.40);
+  border-radius: 30px;
+}
+
+.tagline {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-medium);
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin: 0;
+  padding-inline: var(--space-6);
+}
+
+.playBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.20);
+  border: 2px solid rgba(255, 255, 255, 0.60);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.playBtn:hover {
+  background: rgba(255, 255, 255, 0.32);
+  transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+  .tagline {
+    font-size: var(--text-xl);
+  }
+
+  .playBtn {
+    width: 60px;
+    height: 60px;
+  }
+}

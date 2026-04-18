@@ -1,0 +1,242 @@
+.section {
+  width: 100%;
+  padding-top: 96px; /* navbar height */
+  padding-left: 59px;
+  padding-right: 59px;
+  padding-bottom: 0;
+  background-color: var(--color-bg);
+}
+
+/* ── Two-column split ──
+   Same Figma column ratio as ServiceIntro: 552 (left) / 768 (right) / gap 10px ── */
+.cols {
+  display: flex;
+  gap: 10px;
+  height: 717px;
+}
+
+/* ── Left: solid color panel ── */
+.left {
+  flex: 552;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 48px 48px 52px;
+  border-radius: 40px;
+  animation: serviceCardIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards;
+}
+
+/* ── Bottom group: icon + title + button, all bottom-aligned ── */
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Desktop: icon and title stacked (column) */
+.iconTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.bg_teal  { background-color: var(--color-teal); }
+.bg_lime  { background-color: var(--color-lime); }
+.bg_olive { background-color: var(--color-olive); }
+
+/* ── Icon shape (white) ── */
+.icon {
+  width: 64px;
+  height: 64px;
+  background-color: #ffffff;
+  flex-shrink: 0;
+  opacity: 0;
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.65s forwards;
+}
+
+.shape_circle   { border-radius: 50%; }
+.shape_square   { border-radius: 4px; }
+.shape_triangle {
+  width: 0;
+  height: 0;
+  background: transparent !important;
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+  border-bottom: 64px solid #ffffff;
+}
+
+/* ── Title ── */
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-medium);
+  line-height: var(--leading-h2);
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  white-space: pre-line;
+  opacity: 0;
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+}
+
+/* ── CTA button — solid white with colored text ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 var(--space-8);
+  border-radius: var(--radius-btn);
+  border: none;
+  background-color: #ffffff;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  align-self: flex-start;
+  transition: opacity var(--transition-fast), box-shadow var(--transition-fast);
+  opacity: 0;
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards;
+}
+
+.btn:hover {
+  opacity: 0.92;
+  box-shadow: var(--shadow-btn-hover);
+}
+
+/* ── Right: photo panel ── */
+.right {
+  flex: 768;
+  min-width: 0;
+  border-radius: 40px;
+  overflow: hidden;
+  animation: serviceCardIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1120px) {
+  .section {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+
+  .cols {
+    height: 580px;
+  }
+
+  .left {
+    padding: 36px 36px 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cols {
+    height: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 88px;
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  /* Stack vertically on mobile */
+  .cols {
+    flex-direction: column;
+    height: auto;
+    gap: var(--space-3);
+  }
+
+  .left {
+    flex: none;
+    padding: 28px 28px 32px;
+    min-height: 200px;
+    border-radius: 24px;
+  }
+
+  .right {
+    flex: none;
+    border-radius: 24px;
+    aspect-ratio: 300 / 220;
+  }
+
+  /* Icon + title side by side, centered */
+  .bottom {
+    gap: 20px;
+    align-items: center;
+  }
+
+  .iconTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+
+  .shape_triangle {
+    width: 0;
+    height: 0;
+    background: transparent !important;
+    border-left-width: 22px;
+    border-right-width: 22px;
+    border-bottom-width: 44px;
+  }
+
+  .title {
+    font-size: var(--text-2xl);
+    line-height: var(--leading-h3);
+    margin: 0;
+    text-align: center;
+  }
+
+  .btn {
+    align-self: stretch;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding-top: 72px;
+  }
+
+  .left,
+  .right {
+    border-radius: 20px;
+  }
+}
+
+/* ── Entrance animations ── */
+
+/* Both panels: border-radius expands from 8px to their computed value.
+   Only a `from` keyframe — browser interpolates to the element's CSS,
+   so responsive border-radius values from media queries are respected. */
+@keyframes serviceCardIn {
+  from {
+    border-radius: 8px;
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -7,8 +7,24 @@ import Biotop         from '@sections/Biotop/Biotop'
 import BiotopVideo    from '@sections/BiotopVideo/BiotopVideo'
 import Team           from '@sections/Team/Team'
 import DirectorQuote  from '@sections/DirectorQuote/DirectorQuote'
-import { useLanguage } from '@/context/LanguageContext'
-import styles          from './Home.module.css'
+import { useLanguage }  from '@/context/LanguageContext'
+import { usePageMeta } from '@hooks/usePageMeta'
+import styles           from './Home.module.css'
+
+const pageMeta = {
+  en: {
+    title: 'Garden and Landscape Design Luxembourg | Swimming Ponds, Green Roofs, Gardens',
+    description: 'my Garden is your quality partner for garden and landscape design in Luxembourg, with swimming ponds, green roofs and tailored gardens.',
+  },
+  fr: {
+    title: 'Paysagiste Luxembourg | Étangs de baignade, toitures végétalisées et jardins',
+    description: 'my Garden est votre partenaire de qualité au Luxembourg pour les jardins, les étangs de baignade, les toitures végétalisées et les aménagements paysagers.',
+  },
+  de: {
+    title: 'Garten- und Landschaftsbau Luxemburg | Schwimmteiche, Dachbegrünung und Gärten',
+    description: 'my Garden ist Ihr Qualitätspartner für Garten und Landschaft in Luxemburg, mit Schwimmteichen, Dachbegrünung und individuell gestalteten Gärten.',
+  },
+}
 
 // ── Pond images — real + temp fillers until more are added ──
 import pondImg1  from '@assets/images/swimming-pond-and-living-pool.webp'
@@ -24,11 +40,11 @@ import gardenImg2  from '@assets/images/grass-image.webp'
 const featureContent = {
   en: {
     pond: {
-      title:       'Swimming Pond\n& Living Pool',
-      description: 'Water brings life to any garden — from ponds and fountains to natural streams',
+      title:       'Swimming Ponds\n& Living Pools',
+      description: 'Water brings life to any garden, from ponds and fountains to natural streams',
       bullets: [
         'Water adds a special charm to any garden',
-        'Eco-friendly swimming ponds & living pools — no chemicals or chlorine',
+        'Eco-friendly swimming ponds and living pools, with no chemicals or chlorine',
         'Natural look, unique bathing experience',
         'Custom design & construction',
         'Visit our showroom to see it in action',
@@ -37,7 +53,7 @@ const featureContent = {
     },
     roof: {
       title:        'Green Roofs',
-      description:  'Give back to nature the footprint that your building takes up...',
+      description:  'Give back to nature the footprint your building takes up.',
       bullets: [
         'Visually appealing & eco-friendly',
         'Improve air quality and create city biotopes',
@@ -58,20 +74,20 @@ const featureContent = {
   },
   fr: {
     pond: {
-      title:       'Étangs de Baignade\n& Piscine Naturelle',
-      description: "L'eau donne vie à tout jardin — des étangs aux fontaines et ruisseaux naturels",
+      title:       'Étangs de baignade\n& piscines naturelles',
+      description: "L'eau donne vie à tout jardin, des étangs aux fontaines et aux ruisseaux naturels",
       bullets: [
         "L'eau ajoute un charme particulier à tout jardin",
-        'Étangs de baignade écologiques — sans produits chimiques',
+        'Étangs de baignade écologiques, sans produits chimiques ni chlore',
         'Aspect naturel, expérience de baignade unique',
         'Design et construction sur mesure',
-        'Visitez notre showroom pour le voir en action',
+        'Visitez notre showroom pour le découvrir en vrai',
       ],
       btn: 'Voir plus',
     },
     roof: {
-      title:        'Toits Verts',
-      description:  "Redonnez à la nature l'empreinte que votre bâtiment lui prend...",
+      title:        'Toitures végétalisées',
+      description:  "Redonnez à la nature l'espace que votre bâtiment occupe.",
       bullets: [
         'Esthétique & écologique',
         "Améliore la qualité de l'air et crée des biotopes urbains",
@@ -92,20 +108,20 @@ const featureContent = {
   },
   de: {
     pond: {
-      title:       'Schwimmteiche\n& Living Pool',
-      description: 'Wasser bringt Leben in jeden Garten — von Teichen und Brunnen bis zu natürlichen Bächen',
+      title:       'Schwimmteiche\n& Living Pools',
+      description: 'Wasser bringt Leben in jeden Garten, von Teichen und Brunnen bis zu natürlichen Bächen',
       bullets: [
         'Wasser verleiht jedem Garten einen besonderen Charme',
-        'Umweltfreundliche Schwimmteiche — ohne Chemikalien oder Chlor',
+        'Umweltfreundliche Schwimmteiche und Living Pools, ohne Chemikalien oder Chlor',
         'Natürliches Erscheinungsbild, einzigartiges Badeerlebnis',
         'Individuelle Planung & Ausführung',
-        'Besuchen Sie unsere Ausstellung',
+        'Besuchen Sie unsere Ausstellung und lassen Sie sich inspirieren',
       ],
       btn: 'Mehr sehen',
     },
     roof: {
       title:        'Dachbegrünung',
-      description:  'Geben Sie der Natur den Fußabdruck zurück, den Ihr Gebäude ihr nimmt...',
+      description:  'Geben Sie der Natur den Raum zurück, den Ihr Gebäude einnimmt.',
       bullets: [
         'Optisch ansprechend & umweltfreundlich',
         'Verbessert die Luftqualität und schafft städtische Biotope',
@@ -129,6 +145,8 @@ const featureContent = {
 export default function Home() {
   const { lang } = useLanguage()
   const f = featureContent[lang]
+  const m = pageMeta[lang]
+  usePageMeta(m.title, m.description, lang)
 
   return (
     <>

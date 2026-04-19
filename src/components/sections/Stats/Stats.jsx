@@ -11,7 +11,7 @@ const t = {
       { value: 150, suffix: '',  label: 'Completed projects'  },
       { value: 100, suffix: '',  label: 'Happy clients'       },
     ],
-    description: "After 20+ years of creating gardens and landscapes, we've gained solid expertise — yet we stay open to new ideas, because every garden is unique",
+    description: "After more than 20 years of creating gardens and landscapes, we have built solid expertise while staying open to new ideas, because every garden is unique",
   },
   fr: {
     stats: [
@@ -19,7 +19,7 @@ const t = {
       { value: 150, suffix: '',  label: 'Projets réalisés'    },
       { value: 100, suffix: '',  label: 'Clients satisfaits'  },
     ],
-    description: "Après 20+ ans de création de jardins et de paysages, nous avons acquis une solide expertise — tout en restant ouverts aux nouvelles idées, car chaque jardin est unique",
+    description: "Après plus de 20 ans de création de jardins et de paysages, nous avons acquis une solide expertise tout en restant ouverts aux nouvelles idées, car chaque jardin est unique",
   },
   de: {
     stats: [
@@ -27,7 +27,7 @@ const t = {
       { value: 150, suffix: '',  label: 'Abgeschlossene Projekte'    },
       { value: 100, suffix: '',  label: 'Zufriedene Kunden'          },
     ],
-    description: "Nach 20+ Jahren der Gartengestaltung haben wir solide Expertise gewonnen — und bleiben dennoch offen für neue Ideen, denn jeder Garten ist einzigartig",
+    description: "Nach mehr als 20 Jahren der Garten- und Landschaftsgestaltung haben wir solide Expertise gewonnen und bleiben dennoch offen für neue Ideen, denn jeder Garten ist einzigartig",
   },
 }
 

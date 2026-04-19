@@ -7,20 +7,20 @@ import styles          from './Hero.module.css'
 const t = {
   en: {
     headline_1:    'We are your quality partner',
-    headline_2:    'for garden & landscape',
+    headline_2:    'for garden and landscape in Luxembourg',
     cta_primary:   'Request a Free Quote',
     cta_secondary: 'Explore Our Services',
   },
   fr: {
     headline_1:    'Votre partenaire de qualité',
-    headline_2:    'pour jardin & paysage',
-    cta_primary:   'Demander un Devis Gratuit',
+    headline_2:    'pour le jardin et le paysage au Luxembourg',
+    cta_primary:   'Demander un devis gratuit',
     cta_secondary: 'Nos Services',
   },
   de: {
     headline_1:    'Wir sind Ihr Qualitätspartner',
-    headline_2:    'für Garten & Landschaft',
-    cta_primary:   'Kostenloses Angebot',
+    headline_2:    'für Garten und Landschaft in Luxemburg',
+    cta_primary:   'Kostenloses Angebot anfordern',
     cta_secondary: 'Unsere Leistungen',
   },
 }

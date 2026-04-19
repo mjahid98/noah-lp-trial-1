@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useLanguage } from '@/context/LanguageContext'
 import logo from '@assets/logo/logo-primary.svg'
 import styles from './Navbar.module.css'
@@ -33,10 +34,18 @@ const t = {
 const LANGUAGES = ['en', 'fr', 'de']
 
 export default function Navbar() {
-  const { lang, setLang } = useLanguage()
+  const { lang } = useLanguage()
+  const navigate  = useNavigate()
+  const { pathname } = useLocation()
   const [scrolled, setScrolled]   = useState(false)
   const [menuOpen, setMenuOpen]   = useState(false)
   const content = t[lang]
+
+  const switchLang = (l) => {
+    const newPath = pathname.replace(/^\/(en|fr|de)/, `/${l}`)
+    navigate(newPath)
+    setMenuOpen(false)
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -54,7 +63,7 @@ export default function Navbar() {
       <div className={styles.inner}>
 
         {/* Logo */}
-        <a href="/" className={styles.logoLink} aria-label="My Garden — home">
+        <a href={`/${lang}`} className={styles.logoLink} aria-label="My Garden — home">
           <img src={logo} alt="My Garden logo" className={styles.logo} />
         </a>
 
@@ -76,7 +85,7 @@ export default function Navbar() {
               <button
                 key={l}
                 className={`${styles.langBtn} ${lang === l ? styles.langActive : ''}`}
-                onClick={() => setLang(l)}
+                onClick={() => switchLang(l)}
                 aria-label={`Switch to ${l.toUpperCase()}`}
               >
                 {l.toUpperCase()}
@@ -123,7 +132,7 @@ export default function Navbar() {
             <button
               key={l}
               className={`${styles.langBtn} ${lang === l ? styles.langActive : ''}`}
-              onClick={() => { setLang(l); setMenuOpen(false) }}
+              onClick={() => switchLang(l)}
             >
               {l.toUpperCase()}
             </button>

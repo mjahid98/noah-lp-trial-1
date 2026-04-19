@@ -153,7 +153,7 @@ export default function Services() {
               )}
 
               {/* Button */}
-              <a href={service.href} className={`${styles.btn} ${styles[`btn_${service.color}`]}`}>
+              <a href={`/${lang}${service.href}`} className={`${styles.btn} ${styles[`btn_${service.color}`]}`}>
                 {service.btn}
               </a>
 

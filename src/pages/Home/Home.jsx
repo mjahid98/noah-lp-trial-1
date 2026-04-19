@@ -166,7 +166,7 @@ export default function Home() {
         description={f.pond.description}
         bullets={f.pond.bullets}
         btnLabel={f.pond.btn}
-        btnHref="/swimming-ponds"
+        btnHref={`/${lang}/swimming-ponds`}
         images={[pondImg1, pondImg2, pondImg3]}
       />
 
@@ -183,7 +183,7 @@ export default function Home() {
         partnerLabel={f.roof.partnerLabel}
         partnerHref={f.roof.partnerHref}
         btnLabel={f.roof.btn}
-        btnHref="/green-roofs"
+        btnHref={`/${lang}/green-roofs`}
         images={[roofImg1, roofImg2]}
         reverse
       />
@@ -196,7 +196,7 @@ export default function Home() {
         description={f.garden.description}
         bullets={f.garden.bullets}
         btnLabel={f.garden.btn}
-        btnHref="/gardens"
+        btnHref={`/${lang}/gardens`}
         images={[gardenImg1, gardenImg2]}
       />
 

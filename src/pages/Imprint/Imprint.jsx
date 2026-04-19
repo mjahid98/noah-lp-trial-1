@@ -125,7 +125,7 @@ export default function Imprint() {
   return (
     <main className={styles.page}>
       <div className={styles.inner}>
-        <a href="/" className={styles.backLink}>{content.backLink}</a>
+        <a href={`/${lang}`} className={styles.backLink}>{content.backLink}</a>
         <h1 className={styles.title}>{content.title}</h1>
         <div className={styles.sections}>
           {content.sections.map(s => (

@@ -77,7 +77,7 @@ export default function Footer() {
         <div className={styles.left}>
 
           {/* Logo */}
-          <a href="/" className={styles.logoLink}>
+          <a href={`/${lang}`} className={styles.logoLink}>
             <img src={logo} alt="my Garden" className={styles.logo} />
           </a>
 
@@ -189,7 +189,7 @@ export default function Footer() {
                 </span>
                 <span>
                   {c.termsBefore}
-                  <a href="/terms" className={styles.checkboxLink}>{c.termsLink}</a>
+                  <a href={`/${lang}/terms`} className={styles.checkboxLink}>{c.termsLink}</a>
                   {c.termsAfter}
                 </span>
               </label>
@@ -208,8 +208,8 @@ export default function Footer() {
       {/* ══ FULL-WIDTH legal bottom row ══ */}
       <div className={styles.legalRow}>
         <div className={styles.legal}>
-          <a href="/imprint" className={styles.legalLink}>{c.imprint}</a>
-          <a href="/privacy" className={styles.legalLink}>{c.dataProtect}</a>
+          <a href={`/${lang}/imprint`} className={styles.legalLink}>{c.imprint}</a>
+          <a href={`/${lang}/privacy`} className={styles.legalLink}>{c.dataProtect}</a>
           <span className={styles.copyright}>{c.copyright}</span>
         </div>
       </div>

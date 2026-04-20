@@ -70,7 +70,7 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav className={styles.nav} aria-label="Main navigation">
           {content.links.map(link => (
-            <a key={link.label} href={link.href} className={styles.navLink}>
+            <a key={link.label} href={`/${lang}${link.href}`} className={styles.navLink}>
               {link.label}
             </a>
           ))}
@@ -117,7 +117,7 @@ export default function Navbar() {
         {content.links.map(link => (
           <a
             key={link.label}
-            href={link.href}
+            href={`/${lang}${link.href}`}
             className={styles.mobileLink}
             onClick={() => setMenuOpen(false)}
           >

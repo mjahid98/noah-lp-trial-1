@@ -70,24 +70,25 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   padding: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
-  transition: background var(--transition-fast), transform var(--transition-fast);
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
 }
 
 .arrow:hover {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(255, 255, 255, 0.32);
+  border-color: rgba(255, 255, 255, 0.9);
   transform: translateY(-50%) scale(1.08);
 }
 

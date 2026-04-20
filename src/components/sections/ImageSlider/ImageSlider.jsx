@@ -69,12 +69,12 @@ export default function ImageSlider({ images = [] }) {
           <>
             <button className={`${styles.arrow} ${styles.arrowLeft}`} onClick={prev} aria-label="Previous image">
               <svg width="39" height="39" viewBox="0 0 39 39" fill="none">
-                <path d="M24 28.8L14.4 19.2L24 9.6" stroke="white" strokeOpacity="0.8" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M24 28.8L14.4 19.2L24 9.6" stroke="white" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
             <button className={`${styles.arrow} ${styles.arrowRight}`} onClick={next} aria-label="Next image">
               <svg width="39" height="39" viewBox="0 0 39 39" fill="none">
-                <path d="M14.4 28.8L24 19.2L14.4 9.6" stroke="white" strokeOpacity="0.8" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M14.4 28.8L24 19.2L14.4 9.6" stroke="white" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
 

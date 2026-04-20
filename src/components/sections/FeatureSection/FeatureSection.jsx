@@ -56,12 +56,12 @@ export default function FeatureSection({
           {images.length > 1 && (
             <>
               <button className={`${styles.arrow} ${styles.arrowLeft} ${styles[`arrow_${color}`]}`} onClick={prev} aria-label="Previous image">
-                <svg width="39" height="39" viewBox="0 0 39 39" fill="none">
+                <svg width="22" height="22" viewBox="0 0 39 39" fill="none">
                   <path d="M24.0004 28.8001L14.4004 19.2001L24.0004 9.6001" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
               <button className={`${styles.arrow} ${styles.arrowRight} ${styles[`arrow_${color}`]}`} onClick={next} aria-label="Next image">
-                <svg width="39" height="39" viewBox="0 0 39 39" fill="none">
+                <svg width="22" height="22" viewBox="0 0 39 39" fill="none">
                   <path d="M14.4004 28.8001L24.0004 19.2001L14.4004 9.6001" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>

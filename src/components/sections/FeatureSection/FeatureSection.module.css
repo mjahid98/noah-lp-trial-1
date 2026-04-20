@@ -111,8 +111,8 @@
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   padding: 0;
   cursor: pointer;
   display: flex;
@@ -120,19 +120,20 @@
   justify-content: center;
   z-index: 1;
   border: 1.5px solid currentColor;
+  background: rgba(255, 255, 255, 0.2);
   transition: background var(--transition-fast), opacity var(--transition-fast);
 }
 
 .arrow:hover {
-  opacity: 0.75;
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .arrowLeft  { left: var(--space-4); }
 .arrowRight { right: var(--space-4); }
 
-.arrow_teal  { background: rgba(32, 114, 115, 0.3); color: var(--color-teal); }
-.arrow_lime  { background: rgba(118, 155, 57, 0.3); color: var(--color-lime); }
-.arrow_olive { background: rgba(88, 99, 44, 0.3);  color: var(--color-olive); }
+.arrow_teal  { color: var(--color-teal); }
+.arrow_lime  { color: var(--color-lime); }
+.arrow_olive { color: var(--color-olive); }
 
 /* ── Content column — smaller (2/5 = 40%) ── */
 .contentCol {

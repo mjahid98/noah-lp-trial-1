@@ -119,21 +119,21 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
-  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border: 1.5px solid currentColor;
   transition: transform var(--transition-fast), filter var(--transition-fast);
 }
 
 .arrow:hover {
   transform: translateY(-50%) scale(1.08);
-  filter: brightness(1.15);
+  filter: brightness(1.2);
 }
 
 .arrowLeft  { left: var(--space-4); }
 .arrowRight { right: var(--space-4); }
 
-.arrow_teal  { background: rgba(0, 0, 0, 0.4); color: var(--color-teal); }
-.arrow_lime  { background: rgba(0, 0, 0, 0.4); color: var(--color-lime); }
-.arrow_olive { background: rgba(0, 0, 0, 0.4); color: var(--color-olive); }
+.arrow_teal  { background: rgba(32, 114, 115, 0.3); color: var(--color-teal); }
+.arrow_lime  { background: rgba(118, 155, 57, 0.3); color: var(--color-lime); }
+.arrow_olive { background: rgba(88, 99, 44, 0.3);  color: var(--color-olive); }
 
 /* ── Content column — smaller (2/5 = 40%) ── */
 .contentCol {

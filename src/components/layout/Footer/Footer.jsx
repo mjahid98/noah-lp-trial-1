@@ -87,15 +87,15 @@ export default function Footer() {
               <div className={styles.contactGroup}>
                 <div className={styles.contactItem}>
                   <span className={styles.contactLabel}>{c.address}</span>
-                  <span className={styles.contactValue}>12 Rue du Jardin, L-1234 Luxembourg</span>
+                  <span className={styles.contactValue}>1 Example Street, L-0000 Luxembourg</span>
                 </div>
                 <div className={styles.contactItem}>
                   <span className={styles.contactLabel}>{c.email}</span>
-                  <a href="mailto:info@mygarden.lu" className={styles.contactValue}>info@mygarden.lu</a>
+                  <a href="mailto:info@example.com" className={styles.contactValue}>info@example.com</a>
                 </div>
                 <div className={styles.contactItem}>
                   <span className={styles.contactLabel}>{c.phone}</span>
-                  <a href="tel:+35226386600" className={styles.contactValue}>+352 26 38 66</a>
+                  <a href="tel:+000000000" className={styles.contactValue}>+000 00 00 00</a>
                 </div>
               </div>
               <div className={styles.socials}>

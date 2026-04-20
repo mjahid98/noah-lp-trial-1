@@ -95,7 +95,7 @@ export default function Footer() {
                 </div>
                 <div className={styles.contactItem}>
                   <span className={styles.contactLabel}>{c.phone}</span>
-                  <a href="tel:+000000000" className={styles.contactValue}>+000 00 00 00</a>
+                  <a href="tel:+35226386600" className={styles.contactValue}>+352 26 38 66</a>
                 </div>
               </div>
               <div className={styles.socials}>

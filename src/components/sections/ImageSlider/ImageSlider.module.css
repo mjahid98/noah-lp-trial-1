@@ -70,10 +70,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
   border-radius: 50%;
   width: 52px;
   height: 52px;
@@ -87,8 +85,8 @@
 }
 
 .arrow:hover {
-  background: rgba(255, 255, 255, 0.32);
-  border-color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.65);
+  border-color: #fff;
   transform: translateY(-50%) scale(1.08);
 }
 

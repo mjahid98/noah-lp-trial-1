@@ -107,11 +107,11 @@
 }
 
 .langBtn:hover {
-  color: var(--color-teal);
+  color: var(--color-olive);
 }
 
 .langActive {
-  color: var(--color-teal);
+  color: var(--color-olive);
   font-weight: var(--font-bold);
 }
 

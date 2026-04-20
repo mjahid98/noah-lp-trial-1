@@ -120,20 +120,17 @@
   justify-content: center;
   z-index: 1;
   border: 1.5px solid currentColor;
-  background: rgba(255, 255, 255, 0.55);
-  transition: background var(--transition-fast), opacity var(--transition-fast);
+  background: rgb(177 177 177 / 55%);
+  color: #ffffff;
+  transition: background var(--transition-fast);
 }
 
 .arrow:hover {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgb(177 177 177 / 75%);
 }
 
 .arrowLeft  { left: var(--space-4); }
 .arrowRight { right: var(--space-4); }
-
-.arrow_teal  { color: var(--color-teal); }
-.arrow_lime  { color: var(--color-lime); }
-.arrow_olive { color: var(--color-olive); }
 
 /* ── Content column — smaller (2/5 = 40%) ── */
 .contentCol {
